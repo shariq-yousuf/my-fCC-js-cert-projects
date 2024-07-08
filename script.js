@@ -18,6 +18,15 @@ const projects = [
     githubLink:
       "https://github.com/shariq-yousuf/my-fCC-js-cert-projects/tree/main/Projects/Calorie-Counter",
   },
+  {
+    id: 3,
+    title: "Football Team Cards",
+    description: "",
+    imgSrc: "./src/Football-Team-Cards.png",
+    liveUrl: "./Projects/Football-Team-Cards/index.html",
+    githubLink:
+      "https://github.com/shariq-yousuf/my-fCC-js-cert-projects/tree/main/Projects/Football-Team-Cards",
+  },
 ];
 
 const projectsDiv = document.querySelector("#projects-div");
