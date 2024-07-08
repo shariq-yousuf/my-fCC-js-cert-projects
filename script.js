@@ -27,6 +27,15 @@ const projects = [
     githubLink:
       "https://github.com/shariq-yousuf/my-fCC-js-cert-projects/tree/main/Projects/Football-Team-Cards",
   },
+  {
+    id: 4,
+    title: "Todo App",
+    description: "",
+    imgSrc: "./src/Todo-App.png",
+    liveUrl: "./Projects/Todo-App/index.html",
+    githubLink:
+      "https://github.com/shariq-yousuf/my-fCC-js-cert-projects/tree/main/Projects/Todo-App",
+  },
 ];
 
 const projectsDiv = document.querySelector("#projects-div");
