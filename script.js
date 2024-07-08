@@ -54,6 +54,15 @@ const projects = [
     githubLink:
       "https://github.com/shariq-yousuf/my-fCC-js-cert-projects/tree/main/Projects/Statistics-Calculator",
   },
+  {
+    id: 7,
+    title: "Shopping Cart",
+    description: "",
+    imgSrc: "./src/Shopping-Cart.png",
+    liveUrl: "./Projects/Shopping-Cart/index.html",
+    githubLink:
+      "https://github.com/shariq-yousuf/my-fCC-js-cert-projects/tree/main/Projects/Shopping-Cart",
+  },
 ];
 
 const projectsDiv = document.querySelector("#projects-div");
