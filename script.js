@@ -36,6 +36,15 @@ const projects = [
     githubLink:
       "https://github.com/shariq-yousuf/my-fCC-js-cert-projects/tree/main/Projects/Todo-App",
   },
+  {
+    id: 5,
+    title: "Number Sorter",
+    description: "",
+    imgSrc: "./src/Number-Sorter.png",
+    liveUrl: "./Projects/Number-Sorter/index.html",
+    githubLink:
+      "https://github.com/shariq-yousuf/my-fCC-js-cert-projects/tree/main/Projects/Number-Sorter",
+  },
 ];
 
 const projectsDiv = document.querySelector("#projects-div");
