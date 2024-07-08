@@ -9,6 +9,15 @@ const projects = [
     githubLink:
       "https://github.com/shariq-yousuf/my-fCC-js-cert-projects/tree/main/Projects/RPG-Dragon-Repeller",
   },
+  {
+    id: 2,
+    title: "Calorie Counter",
+    description: "",
+    imgSrc: "./src/Calorie-Counter.png",
+    liveUrl: "./Projects/Calorie-Counter/index.html",
+    githubLink:
+      "https://github.com/shariq-yousuf/my-fCC-js-cert-projects/tree/main/Projects/Calorie-Counter",
+  },
 ];
 
 const projectsDiv = document.querySelector("#projects-div");
