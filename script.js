@@ -45,6 +45,15 @@ const projects = [
     githubLink:
       "https://github.com/shariq-yousuf/my-fCC-js-cert-projects/tree/main/Projects/Number-Sorter",
   },
+  {
+    id: 6,
+    title: "Statistics Calculator",
+    description: "",
+    imgSrc: "./src/Statistics-Calculator.png",
+    liveUrl: "./Projects/Statistics-Calculator/index.html",
+    githubLink:
+      "https://github.com/shariq-yousuf/my-fCC-js-cert-projects/tree/main/Projects/Statistics-Calculator",
+  },
 ];
 
 const projectsDiv = document.querySelector("#projects-div");
