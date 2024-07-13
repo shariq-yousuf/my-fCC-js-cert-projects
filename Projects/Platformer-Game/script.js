@@ -27,7 +27,7 @@ class Player {
     this.height = proportionalSize(40);
   }
   draw() {
-    ctx.fillStyle = "#99c9ff";
+    ctx.fillStyle = "red";
     ctx.fillRect(this.position.x, this.position.y, this.width, this.height);
   }
 
@@ -66,7 +66,11 @@ class Platform {
     this.height = proportionalSize(40);
   }
   draw() {
-    ctx.fillStyle = "#acd157";
+    ctx.shadowColor = "gray";
+    ctx.shadowBlur = 20;
+    ctx.shadowOffsetX = 5;
+    ctx.shadowOffsetY = 5;
+    ctx.fillStyle = "#ffcf33";
     ctx.fillRect(this.position.x, this.position.y, this.width, this.height);
   }
 }
@@ -83,7 +87,7 @@ class CheckPoint {
   }
 
   draw() {
-    ctx.fillStyle = "#f1be32";
+    ctx.fillStyle = "#f54b4b";
     ctx.fillRect(this.position.x, this.position.y, this.width, this.height);
   }
   claim() {
