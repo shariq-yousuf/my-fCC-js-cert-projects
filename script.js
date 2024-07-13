@@ -65,7 +65,7 @@ const projects = [
   },
   {
     id: 7,
-    title: "Platformer Game",
+    title: "Skyhop",
     description: "",
     imgSrc: "./src/Platformer-Game.png",
     liveUrl: "./Projects/Platformer-Game/index.html",
