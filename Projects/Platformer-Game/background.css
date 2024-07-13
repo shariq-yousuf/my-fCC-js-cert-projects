@@ -13,6 +13,22 @@
   box-sizing: border-box;
 }
 
+.material-symbols-outlined {
+  font-variation-settings: "FILL" 0, "wght" 700, "GRAD" 0, "opsz" 24;
+}
+
+#dark-mode-icon {
+  font-size: 1.5rem;
+  color: black;
+  background-color: white;
+  padding: 3px;
+  border-radius: 5px;
+  position: absolute;
+  top: 2rem;
+  right: 3rem;
+  cursor: pointer;
+}
+
 .background-buildings,
 .foreground-buildings {
   width: 100%;
@@ -36,13 +52,23 @@
   justify-content: space-evenly;
 }
 
-.sky {
+.light-sky {
   background: radial-gradient(
     closest-corner circle at 15% 15%,
     #ffcf33,
     #ffcf33 20%,
     #ffff66 21%,
     #bbeeff 100%
+  );
+}
+
+.dark-sky {
+  background: radial-gradient(
+    closest-corner circle at 15% 15%,
+    #ccc,
+    #ccc 20%,
+    #445 21%,
+    #223 100%
   );
 }
 
@@ -286,7 +312,7 @@
     );
 }
 
-@media (max-width: 1000px) {
+/* @media (max-width: 1000px) {
   :root {
     --building-color1: #000;
     --building-color2: #000;
@@ -297,13 +323,4 @@
     --window-color3: #777;
     --window-color4: #777;
   }
-  .sky {
-    background: radial-gradient(
-      closest-corner circle at 15% 15%,
-      #ccc,
-      #ccc 20%,
-      #445 21%,
-      #223 100%
-    );
-  }
-}
+} */

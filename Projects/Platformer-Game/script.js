@@ -3,6 +3,8 @@ const canvas = document.getElementById("canvas");
 const startScreen = document.querySelector(".start-screen");
 const checkpointScreen = document.querySelector(".checkpoint-screen");
 const checkpointMessage = document.querySelector(".checkpoint-screen > p");
+const bgSky = document.querySelector(".background-buildings");
+const darkModeIcon = document.querySelector("#dark-mode-icon");
 const ctx = canvas.getContext("2d");
 canvas.width = innerWidth;
 canvas.height = innerHeight;
@@ -282,6 +284,41 @@ const showCheckpointScreen = (msg) => {
   }
 };
 
+const enableDarkMode = () => {
+  let vars;
+  bgSky.classList.toggle("dark-sky");
+  bgSky.classList.toggle("light-sky");
+
+  if (bgSky.classList[1] === "dark-sky") {
+    console.log("working");
+    vars = {
+      "--building-color1": "#000",
+      "--building-color2": "#000",
+      "--building-color3": "#000",
+      "--building-color4": "#000",
+      "--window-color1": "#777",
+      "--window-color2": "#777",
+      "--window-color3": "#777",
+      "--window-color4": "#777",
+    };
+  } else {
+    vars = {
+      "--building-color1": "#aa80ff",
+      "--building-color2": "#66cc99",
+      "--building-color3": "#cc6699",
+      "--building-color4": "#538cc6",
+      "--window-color1": "#bb99ff",
+      "--window-color2": "#8cd9b3",
+      "--window-color3": "#d98cb3",
+      "--window-color4": "#8cb3d9",
+    };
+  }
+
+  Object.entries(vars).forEach((v) =>
+    document.body.style.setProperty(v[0], v[1])
+  );
+};
+
 startBtn.addEventListener("click", startGame);
 
 window.addEventListener("keydown", ({ key }) => {
@@ -291,3 +328,5 @@ window.addEventListener("keydown", ({ key }) => {
 window.addEventListener("keyup", ({ key }) => {
   movePlayer(key, 0, false);
 });
+
+darkModeIcon.addEventListener("click", enableDarkMode);
