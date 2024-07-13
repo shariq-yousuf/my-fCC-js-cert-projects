@@ -29,7 +29,9 @@ class Player {
     this.height = proportionalSize(40);
   }
   draw() {
-    ctx.fillStyle = "red";
+    bgSky.classList[1] === "light-sky"
+      ? (ctx.fillStyle = "red")
+      : (ctx.fillStyle = "white");
     ctx.fillRect(this.position.x, this.position.y, this.width, this.height);
   }
 
@@ -72,7 +74,9 @@ class Platform {
     ctx.shadowBlur = 20;
     ctx.shadowOffsetX = 5;
     ctx.shadowOffsetY = 5;
-    ctx.fillStyle = "#ffcf33";
+    bgSky.classList[1] === "light-sky"
+      ? (ctx.fillStyle = "#ffcf33")
+      : (ctx.fillStyle = "#fcdf85");
     ctx.fillRect(this.position.x, this.position.y, this.width, this.height);
   }
 }
@@ -89,7 +93,9 @@ class CheckPoint {
   }
 
   draw() {
-    ctx.fillStyle = "#f54b4b";
+    bgSky.classList[1] === "light-sky"
+      ? (ctx.fillStyle = "#f54b4b")
+      : (ctx.fillStyle = "white");
     ctx.fillRect(this.position.x, this.position.y, this.width, this.height);
   }
   claim() {
@@ -288,9 +294,10 @@ const enableDarkMode = () => {
   let vars;
   bgSky.classList.toggle("dark-sky");
   bgSky.classList.toggle("light-sky");
+  const body = document.querySelector("body");
+  const btn = document.querySelector(".btn");
 
   if (bgSky.classList[1] === "dark-sky") {
-    console.log("working");
     vars = {
       "--building-color1": "#000",
       "--building-color2": "#000",
@@ -300,7 +307,12 @@ const enableDarkMode = () => {
       "--window-color2": "#777",
       "--window-color3": "#777",
       "--window-color4": "#777",
+      "--section-bg-color": "#000000ae",
     };
+
+    body.style.color = "white";
+    btn.style.background = "white";
+    btn.style.border = "none";
   } else {
     vars = {
       "--building-color1": "#aa80ff",
@@ -311,7 +323,12 @@ const enableDarkMode = () => {
       "--window-color2": "#8cd9b3",
       "--window-color3": "#d98cb3",
       "--window-color4": "#8cb3d9",
+      "--section-bg-color": "#ffffffdf",
     };
+
+    body.style.color = "#0919ff";
+    btn.style.background = "linear-gradient(#66cc99, #8cd9b3)";
+    btn.style.border = "medium outset #8cd9b3";
   }
 
   Object.entries(vars).forEach((v) =>
