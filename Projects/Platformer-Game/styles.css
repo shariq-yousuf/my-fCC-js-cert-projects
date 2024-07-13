@@ -27,9 +27,29 @@ main {
   background-color: transparent;
   position: absolute;
   top: 0;
-  z-index: 999;
+  z-index: 2;
   width: 100dvw;
   height: 100dvh;
+}
+
+#left-btn {
+  display: none;
+  z-index: 3;
+  font-size: 3rem;
+  color: red;
+  position: absolute;
+  top: 50%;
+  left: 10px;
+}
+
+#right-btn {
+  display: none;
+  z-index: 3;
+  font-size: 3rem;
+  color: red;
+  position: absolute;
+  top: 50%;
+  right: 10px;
 }
 
 .start-screen {
@@ -108,5 +128,10 @@ main {
 
   .checkpoint-screen {
     max-width: 300px;
+  }
+
+  #left-btn,
+  #right-btn {
+    display: none;
   }
 }

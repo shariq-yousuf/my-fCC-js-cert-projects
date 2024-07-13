@@ -5,6 +5,8 @@ const checkpointScreen = document.querySelector(".checkpoint-screen");
 const checkpointMessage = document.querySelector(".checkpoint-screen > p");
 const bgSky = document.querySelector(".background-buildings");
 const darkModeIcon = document.querySelector("#dark-mode-icon");
+const leftBtn = document.querySelector("#left-btn");
+const rightBtn = document.querySelector("#right-btn");
 const ctx = canvas.getContext("2d");
 canvas.width = innerWidth;
 canvas.height = innerHeight;
@@ -280,6 +282,11 @@ const startGame = () => {
   canvas.style.display = "block";
   startScreen.style.display = "none";
   animate();
+
+  if (innerWidth < 768) {
+    leftBtn.style.display = "block";
+    rightBtn.style.display = "block";
+  }
 };
 
 const showCheckpointScreen = (msg) => {
@@ -344,6 +351,30 @@ window.addEventListener("keydown", ({ key }) => {
 
 window.addEventListener("keyup", ({ key }) => {
   movePlayer(key, 0, false);
+});
+
+leftBtn.addEventListener("touchstart", () => {
+  movePlayer("ArrowLeft", 8, true);
+});
+
+leftBtn.addEventListener("touchend", () => {
+  movePlayer("ArrowLeft", 0, false);
+});
+
+rightBtn.addEventListener("touchstart", () => {
+  movePlayer("ArrowRight", 8, true);
+});
+
+rightBtn.addEventListener("touchend", () => {
+  movePlayer("ArrowRight", 0, false);
+});
+
+canvas.addEventListener("touchstart", () => {
+  movePlayer("ArrowUp", 8, true);
+});
+
+canvas.addEventListener("touchend", () => {
+  movePlayer("ArrowUp", 0, false);
 });
 
 darkModeIcon.addEventListener("click", enableDarkMode);
