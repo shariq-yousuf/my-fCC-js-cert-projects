@@ -63,6 +63,15 @@ const projects = [
     githubLink:
       "https://github.com/shariq-yousuf/my-fCC-js-cert-projects/tree/main/Projects/Shopping-Cart",
   },
+  {
+    id: 7,
+    title: "Platformer Game",
+    description: "",
+    imgSrc: "./src/Platformer-Game.png",
+    liveUrl: "./Projects/Platformer-Game/index.html",
+    githubLink:
+      "https://github.com/shariq-yousuf/my-fCC-js-cert-projects/tree/main/Projects/Platformer-Game",
+  },
 ];
 
 const projectsDiv = document.querySelector("#projects-div");
