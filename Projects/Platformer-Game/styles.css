@@ -33,6 +33,8 @@ main {
 }
 
 #left-btn {
+  background-color: transparent;
+  border: none;
   display: none;
   z-index: 3;
   font-size: 3rem;
@@ -43,6 +45,8 @@ main {
 }
 
 #right-btn {
+  background-color: transparent;
+  border: none;
   display: none;
   z-index: 3;
   font-size: 3rem;
