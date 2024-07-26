@@ -64,13 +64,22 @@ const projects = [
       "https://github.com/shariq-yousuf/my-fCC-js-cert-projects/tree/main/Projects/Shopping-Cart",
   },
   {
-    id: 7,
+    id: 8,
     title: "Skyhop",
     description: "",
     imgSrc: "./src/Platformer-Game.png",
     liveUrl: "./Projects/Platformer-Game/index.html",
     githubLink:
       "https://github.com/shariq-yousuf/my-fCC-js-cert-projects/tree/main/Projects/Platformer-Game",
+  },
+  {
+    id: 9,
+    title: "Pokémon Search App",
+    description: "",
+    imgSrc: "./src/Pokémon-Search-App.png",
+    liveUrl: "./Projects/Pokémon-Search-App/index.html",
+    githubLink:
+      "https://github.com/shariq-yousuf/my-fCC-js-cert-projects/tree/main/Projects/Pokémon-Search-App",
   },
 ];
 
