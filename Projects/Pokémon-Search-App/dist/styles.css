@@ -10,7 +10,6 @@
 
 * {
   box-sizing: border-box;
-  /* margin: 0; */
   padding: 0;
 }
 
@@ -23,6 +22,7 @@ body {
   background-repeat: no-repeat;
   color: white;
   height: 100dvh;
+  overflow: hidden;
 }
 
 header {
@@ -40,7 +40,7 @@ main {
   min-height: 60%;
   background: linear-gradient(
     90deg,
-    rgba(255, 255, 255, 0.927),
+    rgba(239, 218, 86, 0.927),
     rgba(255, 0, 0, 0.948)
   );
   padding: 2rem;
@@ -87,13 +87,22 @@ label {
   color: red;
 }
 
+.err-msg {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  margin-top: -10px;
+  opacity: 0;
+  transition: all 0.2s;
+}
+
 .title {
   font-family: title-font;
   font-weight: normal;
+  margin: 0;
 }
 
 table {
   width: 30%;
+  font-size: 1.2rem;
 }
 
 td:nth-child(2) {
@@ -113,13 +122,22 @@ th {
 }
 
 @media screen and (max-width: 720px) {
+  body {
+    overflow: scroll;
+  }
+
   main {
     background: linear-gradient(
-      rgba(255, 255, 255, 0.927),
+      rgba(239, 218, 86, 0.927),
       rgba(255, 0, 0, 0.948)
     );
   }
+
   main > * {
     width: 95%;
+  }
+
+  table {
+    font-size: 1rem;
   }
 }
