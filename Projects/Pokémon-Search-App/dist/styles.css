@@ -1,11 +1,11 @@
 @font-face {
   font-family: title-font;
-  src: url(../src/fonts/WowDino.ttf);
+  src: url(./fonts/WowDino.ttf);
 }
 
 @font-face {
   font-family: text-font;
-  src: url(../src/fonts/Moltors-eZzgm.ttf);
+  src: url(./fonts/Moltors-eZzgm.ttf);
 }
 
 * {
@@ -16,7 +16,7 @@
 body {
   font-family: text-font;
   background-color: black;
-  background-image: url(../src/assets/pokemon-bg.jpg);
+  background-image: url(./assets/pokemon-bg.jpg);
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
